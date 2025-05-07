@@ -8,5 +8,9 @@ list.addEventListener('click', (listEvent) => {
 
   const listItem = listEvent.target.closest('.list-item__link');
 
+  if (!listItem) {
+    return;
+  }
+
   largeImg.src = listItem.href;
 });
